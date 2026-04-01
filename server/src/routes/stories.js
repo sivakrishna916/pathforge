@@ -1,5 +1,6 @@
 // server/src/routes/stories.js
 import express from 'express'
+import User from '../models/User.js'
 import {
   submitStory,
   getFeed,
@@ -20,6 +21,17 @@ router.get('/feed', getFeed)
 router.get('/admin/all', protect, adminOnly, getAdminStories)
 router.patch('/admin/:id/review', protect, adminOnly, reviewStory)
 
+router.get('/saved', protect, async (req, res) => {
+  const user = await User.findById(req.user._id).populate('savedStories');
+  res.json({ stories: user.savedStories });
+});
+router.get('/pending', protect, adminOnly, async (req, res) => {
+  const stories = await Story.find({ status: 'pending' })
+    .populate('author', 'name email')
+    .sort({ createdAt: -1 });
+
+  res.json({ stories });
+});
 // Dynamic route MUST be last
 router.get('/:id', getStoryById)
 
