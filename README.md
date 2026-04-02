@@ -2,10 +2,12 @@
 
 > Career decision intelligence for Indian youth — because your path shouldn't depend on who you know.
 
-![MIT License](https://img.shields.io/badge/license-MIT-amber)
-![Stack](https://img.shields.io/badge/stack-MERN-blue)
-![Status](https://img.shields.io/badge/status-live-brightgreen)
-![Made for India](https://img.shields.io/badge/made%20for-India%20🇮🇳-orange)
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen?style=for-the-badge)](https://pathforge-gray.vercel.app)
+[![MIT License](https://img.shields.io/badge/license-MIT-amber?style=for-the-badge)](./LICENSE)
+[![Stack](https://img.shields.io/badge/stack-MERN-blue?style=for-the-badge)](#-tech-stack)
+[![Made for India](https://img.shields.io/badge/made%20for-India%20🇮🇳-orange?style=for-the-badge)](#)
+
+**🌐 Live:** [pathforge-gray.vercel.app](https://pathforge-gray.vercel.app) &nbsp;|&nbsp; **⚙️ API:** [pathforge-wjyl.onrender.com](https://pathforge-wjyl.onrender.com)
 
 ---
 
@@ -65,6 +67,7 @@ Saves, upvotes, or submits their own journey
 ```
 
 ---
+
 ## 📸 Preview
 
 ### 🏠 Home
@@ -84,15 +87,19 @@ Saves, upvotes, or submits their own journey
 
 ### 📊 Results
 ![Results](./screenshots/quizresults.png)
+
+---
+
 ## 🧱 Tech Stack
 
 | Layer | Technology |
 |---|---|
-| Frontend | React (Vite) + Tailwind CSS |
+| Frontend | React 18 (Vite) + Tailwind CSS |
 | Backend | Node.js + Express |
 | Database | MongoDB Atlas (Mongoose) |
 | Auth | JWT + bcrypt |
 | Charts | Recharts |
+| State | Zustand + Context API |
 | Deployment | Vercel (frontend) + Render (backend) |
 
 ---
@@ -101,20 +108,20 @@ Saves, upvotes, or submits their own journey
 
 ```
 pathforge/
-├── client/               # React frontend (Vite + Tailwind)
+├── client/                   # React frontend (Vite + Tailwind)
 │   └── src/
-│       ├── pages/        # Home, Quiz, Stories, Dashboard, Admin...
-│       ├── components/   # Navbar, UI components
-│       ├── context/      # AuthContext
-│       └── services/     # Axios API instance
+│       ├── pages/            # Home, Quiz, Stories, Dashboard, Admin...
+│       ├── components/       # Navbar, UI components
+│       ├── context/          # AuthContext
+│       └── services/         # Axios API instance
 │
-└── server/               # Express backend
+└── server/                   # Express backend
     └── src/
-        ├── controllers/  # Route handlers
-        ├── models/        # Mongoose schemas
-        ├── routes/        # API routes
-        ├── middleware/    # Auth + admin guards
-        └── services/     # Quiz scoring engine
+        ├── controllers/      # Route handlers
+        ├── models/           # Mongoose schemas
+        ├── routes/           # API routes
+        ├── middleware/        # Auth + admin guards
+        └── services/         # Quiz scoring engine
 ```
 
 ---
@@ -123,7 +130,7 @@ pathforge/
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/YOUR_USERNAME/pathforge.git
+git clone https://github.com/sivakrishna916/pathforge.git
 cd pathforge
 ```
 
@@ -148,7 +155,7 @@ npm run dev
 ## 🌍 Environment Variables
 
 **`server/.env`**
-```
+```env
 MONGO_URI=your_mongodb_atlas_connection_string
 JWT_SECRET=your_strong_secret_key
 CLIENT_URL=http://localhost:5173
@@ -157,7 +164,7 @@ NODE_ENV=development
 ```
 
 **`client/.env`**
-```
+```env
 VITE_API_URL=http://localhost:5000/api
 ```
 
@@ -165,21 +172,23 @@ VITE_API_URL=http://localhost:5000/api
 
 ## 🚀 Deployment
 
-| Service | Platform |
-|---|---|
-| Frontend | [Vercel](https://vercel.com) |
-| Backend | [Render](https://render.com) |
-| Database | [MongoDB Atlas](https://cloud.mongodb.com) |
+| Service | Platform | URL |
+|---|---|---|
+| Frontend | [Vercel](https://vercel.com) | [pathforge-gray.vercel.app](https://pathforge-gray.vercel.app) |
+| Backend | [Render](https://render.com) | [pathforge-wjyl.onrender.com](https://pathforge-wjyl.onrender.com) |
+| Database | [MongoDB Atlas](https://cloud.mongodb.com) | Hosted cluster |
+
+> ⚠️ The backend is on Render's free tier — first request after inactivity may take ~30 seconds to wake up.
 
 ---
 
 ## 📌 What Makes This Different
 
-- 🇮🇳 **Built for India** — segments match Indian education system (10th, Inter MPC, BiPC, Degree, Dropout, Working)
-- 🔐 **Role-based auth** — separate user and admin flows
-- 📊 **Trait-based scoring** — not a generic quiz, but a real behavioral engine
+- 🇮🇳 **Built for India** — segments match the Indian education system (10th, Inter MPC, BiPC, Degree, Dropout, Working)
+- 🔐 **Role-based auth** — separate user and admin flows with JWT-protected routes
+- 📊 **Trait-based scoring** — not a generic quiz, but a real behavioral engine across 5 dimensions
 - 🏗 **Production-ready architecture** — protected routes, JWT interceptors, ranked story feed
-- 🎨 **Polished UI** — dark theme, amber accent, mobile-responsive
+- 🎨 **Polished UI** — dark theme, amber accent, fully mobile-responsive
 
 ---
 
@@ -195,9 +204,9 @@ VITE_API_URL=http://localhost:5000/api
 
 ## 👨‍💻 Author
 
-Built by **Sivakrishna Reddy** — 3rd year CSE student.
+Built by **Sivakrishna Reddy** — 3rd year CSE student passionate about building products that matter.
 
-[![GitHub](https://img.shields.io/badge/GitHub-sivakrishna916-181717?logo=github)](https://github.com/sivakrishna916/pathforge)
+[![GitHub](https://img.shields.io/badge/GitHub-sivakrishna916-181717?style=for-the-badge&logo=github)](https://github.com/sivakrishna916)
 
 ---
 
