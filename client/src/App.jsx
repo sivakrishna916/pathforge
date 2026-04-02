@@ -1,14 +1,13 @@
 // client/src/App.jsx
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { useAuth } from './context/AuthContext'
-
+import Dashboard from "./pages/Dashboard";
 import Home      from './pages/Home'
 import Login     from './pages/Login'
 import Register  from './pages/Register'
 import Stories   from './pages/Stories'
 import StoryDetail from './pages/StoryDetail'
 import Quiz      from './pages/Quiz'
-import Dashboard from './pages/Dashboard'
 import Submit    from './pages/Submit'
 import Admin     from './pages/Admin'
 import Navbar    from './components/ui/Navbar'
@@ -38,8 +37,7 @@ export default function App() {
         <Route path="/stories"    element={<Stories />} />
         <Route path="/stories/:id" element={<StoryDetail />} />
         <Route path="/quiz"       element={<Quiz />} />
-
-        <Route path="/dashboard"  element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+        <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
         <Route path="/submit"     element={<ProtectedRoute><Submit /></ProtectedRoute>} />
         <Route path="/admin"      element={<AdminRoute><Admin /></AdminRoute>} />
       </Routes>

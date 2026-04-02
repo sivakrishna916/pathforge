@@ -1,4 +1,5 @@
 // server/src/models/Path.js
+import mongoose from 'mongoose'
 const pathSchema = new mongoose.Schema({
   title:       { type: String, required: true },   // "BSc Computer Science"
   cluster:     { type: String, required: true },   // "engineering"

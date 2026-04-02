@@ -1,6 +1,7 @@
 // server/src/routes/stories.js
 import express from 'express'
 import User from '../models/User.js'
+import Story from '../models/Story.js'
 import {
   submitStory,
   getFeed,

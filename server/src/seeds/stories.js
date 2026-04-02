@@ -9,6 +9,10 @@ await mongoose.connect(process.env.MONGO_URI)
 
 // Use your existing test user's id
 const user = await User.findOne({ email: 't@t.com' })
+if (!user) {
+  console.log('User not found. Run register via /api/auth/register first.')
+  process.exit()
+}
 
 await Story.deleteMany({})
 await Story.insertMany([
